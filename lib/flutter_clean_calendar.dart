@@ -76,14 +76,14 @@ class _CalendarState extends State<Calendar> {
   Iterable<DateTime> selectedWeekDays;
   DateTime _selectedDate = DateTime.now();
   String currentMonth;
-  bool isExpanded = true;
+  bool isExpanded = false;
   String displayMonth = "";
   DateTime get selectedDate => _selectedDate;
 
   void initState() {
     super.initState();
     _selectedDate = widget?.initialDate ?? DateTime.now();
-    isExpanded = widget?.isExpanded ?? true;
+    isExpanded = widget?.isExpanded ?? false;
     selectedMonthsDays = _daysInMonth(_selectedDate);
     selectedWeekDays = Utils.daysInRange(
             _firstDayOfWeek(_selectedDate), _lastDayOfWeek(_selectedDate))
