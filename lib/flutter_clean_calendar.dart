@@ -55,7 +55,7 @@ class Calendar extends StatefulWidget {
     this.eventColor,
     this.eventDoneColor,
     this.initialDate,
-    this.isExpanded = true,
+    this.isExpanded = false,
     this.weekDays = const ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     this.locale = "en_US",
     this.startOnMonday = false,
@@ -76,7 +76,7 @@ class _CalendarState extends State<Calendar> {
   Iterable<DateTime> selectedWeekDays;
   DateTime _selectedDate = DateTime.now();
   String currentMonth;
-  bool isExpanded = false;
+  bool isExpanded = true;
   String displayMonth = "";
   DateTime get selectedDate => _selectedDate;
 
